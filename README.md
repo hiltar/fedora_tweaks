@@ -68,6 +68,23 @@ sudo vim /etc/gdm/custom.conf
 DefaultSession=gnome-xorg.desktop
 ```
 
+## Updates with dnf
+
+```
+# Upgrading to new version
+sudo dnf upgrade --refresh
+sudo dnf autoremove
+sudo dnf install dnf-plugin-system-upgrade
+sudo dnf system-upgrade download --releasever=XX
+sudo dnf system-upgrade reboot
+# If any errors occurs
+sudo dnf system-upgrade download --releasever=XX --allowerasing
+
+# Safer updates if upgrading with dnf
+sudo dnf offline-upgrade download
+sudo dnf offline-upgrade reboot
+```
+
 
 ## Flatpaks
 ```
@@ -85,6 +102,12 @@ sudo dnf upgrade --refresh
 sudo dnf groupupdate core
 ```
 
+### Delete repositories
+```
+dnf repolist
+sudo dnf config-manager --set-disabled REPO
+```
+
 ---
 
 ## Useful, missing packages
@@ -99,6 +122,11 @@ openssl
 ### gjs quit unexpectedly
 ```
 # Delete System Monitor
+```
+
+### Slow booting into OS
+```
+systemctl disable iscsi
 ```
 
 ---
@@ -144,6 +172,15 @@ Gnome Tweaks > Fonts
 sudo dnf install 'google-roboto*' 'mozilla-fira*' fira-code-fonts
 ```
 
+### Microsoft fonts
+Standard font: Nimbus Roman
+
+Serif font: Nimbus Roman
+
+Sans-serif font: Nimbus Sans
+
+Fixed-width font: Fira Code
+
 ### Android integration
 https://extensions.gnome.org/extension/1319/gsconnect/
 
@@ -162,6 +199,8 @@ Check settings
 ***Fedora 36***
 
 ===========
+
+Install extension: https://extensions.gnome.org/extension/1319/gsconnect/
 
 Pair Android
 
@@ -188,3 +227,11 @@ Steam configures games to use best configurations
 Launch games via Lutris
 
 ---
+
+## Misc
+
+### Copy file contents into clipboard
+```
+sudo dnf install xsel
+cat tweakkeja.md | xsel -b
+```
