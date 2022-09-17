@@ -141,13 +141,6 @@ gnome-tweaks
 # Window Titlebars > Titlebar Buttons: Maximize on, Minimize on
 ```
 
-### Console
-```
-# Minimal console to replace Terminal
-sudo dnf install gnome-console
-sudo dnf remove terminal
-```
-
 ## Gnome Extensions
 ##### Google Chrome
 https://chrome.google.com/webstore/detail/gnome-shell-integration/gphhapmejobijbbhgpjhcjognlahblep
@@ -181,6 +174,11 @@ Sans-serif font: Nimbus Sans
 
 Fixed-width font: Fira Code
 
+***Better fonts***
+```
+sudo dnf install google-cousine-fonts
+```
+
 ### Android integration
 https://extensions.gnome.org/extension/1319/gsconnect/
 
@@ -206,8 +204,6 @@ Pair Android
 
 Check settings
 
-
-
 ---
 
 ## Games
@@ -222,9 +218,7 @@ Enable Steam Play for all other titles
 
 Run other titles with: Proton version
 
-Steam configures games to use best configurations
-
-Launch games via Lutris
+Launch games via Lutris if best performance is needed
 
 ---
 
@@ -233,5 +227,24 @@ Launch games via Lutris
 ### Copy file contents into clipboard
 ```
 sudo dnf install xsel
-cat tweakkeja.md | xsel -b
+cat tweakkeja.md | xsel --clipboard
 ```
+
+### Console
+```
+# Minimal console to replace Terminal
+sudo dnf install gnome-console
+sudo dnf remove terminal
+```
+
+### Monitoring with btop
+```
+sudo dnf install btop
+```
+
+### Putty & File Transfer
+```
+sudo dnf install putty filezilla
+```
+
+---
