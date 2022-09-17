@@ -158,6 +158,7 @@ mv -rf theme-folder ~/.themes
 # To use themes, open Gnome Tweaks > Appearance
 gnome-tweaks
 ```
+![Neofetch](/pictures/neofetch.png)
 
 ### Fonts
 Gnome Tweaks > Fonts
