@@ -68,6 +68,10 @@ sudo vim /etc/gdm/custom.conf
 DefaultSession=gnome-xorg.desktop
 ```
 
+## Fingerprint reader
+[Installation guide](https://gist.github.com/borcean/f32c47f6cc52cee33dfc2265ce63f777)
+
+
 ## Updates with dnf
 
 ```
