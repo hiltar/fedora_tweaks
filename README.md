@@ -58,6 +58,9 @@ sudo dnf install tlp tlp-rdw
 
 ### Display stuttering or some features isn't working as they should be
 ```
+# Wayland is recommended
+# X11 produces more heat etc.
+
 # Log out, Gear > X11 > Log in
 # Test X11
 
