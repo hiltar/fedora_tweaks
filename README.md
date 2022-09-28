@@ -75,13 +75,13 @@ DefaultSession=gnome-xorg.desktop
 
 ```
 # To change speed & sensitivity, create a file
-sudo vim /etc/tmpfiles.d/trackpoint.conf
+sudo vim /usr/share/libinput/local-overrides.quirks
 # With contents:
-w/sys/devices/platform/i8042/serio1/serio2/speed - - - - 150
-w /sys/devices/platform/i8042/serio1/serio2/sensitivity - - - - 128
+[Trackpoint Override]
 
-# Execute to apply trackpoint.conf file
-systemd-tmpfiles --prefix=/sys --create
+MatchUdevType=pointingstick
+
+AttrTrackpointMultiplier=.75
 ```
 
 ## Updates with dnf
