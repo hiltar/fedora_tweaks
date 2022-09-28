@@ -71,6 +71,18 @@ DefaultSession=gnome-xorg.desktop
 ## Fingerprint reader
 [Installation guide](https://gist.github.com/borcean/f32c47f6cc52cee33dfc2265ce63f777)
 
+## Trackpoint
+
+```
+# To change speed & sensitivity, create a file
+sudo vim /etc/tmpfiles.d/trackpoint.conf
+# With contents:
+w/sys/devices/platform/i8042/serio1/serio2/speed - - - - 150
+w /sys/devices/platform/i8042/serio1/serio2/sensitivity - - - - 128
+
+# Execute to apply trackpoint.conf file
+systemd-tmpfiles --prefix=/sys --create
+```
 
 ## Updates with dnf
 
