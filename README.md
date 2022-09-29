@@ -145,7 +145,8 @@ openssl
 
 ### Slow booting into OS
 ```
-systemctl disable iscsi
+sudo systemctl disable iscsi
+sudo systemctl disable NetworkManager-wait-online.service
 ```
 
 ---
