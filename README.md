@@ -14,6 +14,41 @@ sudo gpasswd -d USER wheel
 sudo !!
 ```
 
+---
+
+## Disk
+
+### Encryption
+
+#### Setup encryption
+
+It is mandatory to setup encryption while doing partitions at installation
+
+TODO
+
+#### Setup TPM2
+
+[TPM documentation](https://wiki.archlinux.org/title/Trusted_Platform_Module)
+
+```
+sudo dnf install tpm2-tools
+sudo systemd-cryptenroll --tpm2-device=auto --tpm2-pcrs=0+7 /dev/sdX
+
+# add tpm2-device=auto in /etc/crypttab
+
+sudo dracut -f
+```
+
+### Cloning / Backups
+
+TODO
+
+### Disaster recovery
+
+TODO
+
+---
+
 ## Drivers
 
 ### Install drivers
@@ -54,6 +89,8 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys volume-step 2
 sudo dnf install tlp tlp-rdw
 ```
 
+---
+
 ## Display
 
 ### Display stuttering or some features isn't working as they should be
@@ -71,8 +108,12 @@ sudo vim /etc/gdm/custom.conf
 DefaultSession=gnome-xorg.desktop
 ```
 
+---
+
 ## Fingerprint reader
 [Installation guide](https://gist.github.com/borcean/f32c47f6cc52cee33dfc2265ce63f777)
+
+---
 
 ## Trackpoint
 
@@ -86,6 +127,8 @@ MatchUdevType=pointingstick
 
 AttrTrackpointMultiplier=.75
 ```
+
+---
 
 ## Updates with dnf
 
@@ -104,6 +147,7 @@ sudo dnf offline-upgrade download
 sudo dnf offline-upgrade reboot
 ```
 
+---
 
 ## Flatpaks
 ```
