@@ -145,6 +145,12 @@ openssl
 
 ### Slow booting into OS
 ```
+# Systemd-analyze shows the OS boot time
+systemd-analyze
+systemd-analyze blame
+systemd-analyze critical-chain
+
+# Unnecessary services to be disabled
 sudo systemctl disable iscsi
 sudo systemctl disable NetworkManager-wait-online.service
 ```
