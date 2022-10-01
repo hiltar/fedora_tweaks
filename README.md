@@ -41,7 +41,15 @@ sudo dracut -f
 
 ### Cloning / Backups
 
+```
+sudo dnf install timeshift
+
+# Initial setup
+Select Snapshot Type: BTRFS
+
 TODO
+
+```
 
 ### Disaster recovery
 
