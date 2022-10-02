@@ -116,6 +116,21 @@ sudo vim /etc/gdm/custom.conf
 DefaultSession=gnome-xorg.desktop
 ```
 
+### VAAPI / Hardware acceleration not working due to patents
+[Phoronix article about VAAPI](https://www.phoronix.com/news/Fedora-Disable-Bad-VA-API)
+
+```
+# This affects only AMD users
+# To build MESA with required codecs,
+# installation script is found in
+# ./scripts/amd folder
+
+sh mesa_install.sh
+
+### Cronjob TODO
+
+```
+
 ---
 
 ## Fingerprint reader
