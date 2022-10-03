@@ -341,4 +341,11 @@ sudo dnf install btop
 sudo dnf install putty filezilla
 ```
 
+### Traditional Alt+Tab
+```
+# Settings > Keyboard > View and Customize Shortcuts
+# Search: Switch windows
+# Assign shortcut, press Alt + Tab
+```
+
 ---
