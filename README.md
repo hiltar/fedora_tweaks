@@ -1,5 +1,23 @@
-# Tweaks for Fedora 36 by Tarmo
-These tweaks will improve Fedora 36 in Thinkpad T480
+# Tweaks for Fedora
+These tweaks will improve Fedora
+
+# Note: Silverblue / Kinoite
+
+[Silverblue GNOME](https://silverblue.fedoraproject.org/)
+
+[Kinoite KDE](https://kinoite.fedoraproject.org/)
+
+[Kinoite Tweaks](/kinoite/README.md)
+
+**It is recommended to use Fedora Silverblue (GNOME) or Fedora Kinoite (KDE) for laptop.**
+
+**Silverblue/Kinoite is more secure due to it's design and is considered as main installation for laptops when there isn't backup system available (Backup to HDD, cloud backup, clone).**
+
+**Think about this: laptops are used while travelling and sometimes, updates or any changes might produces errors that bricks the OS. In this scenario, user must carry either an OS image to access the bricked OS's disk contents or install the OS again. Unfortunately Silverblue/Kinoite is not immune to bricking but it has a unique recovery process as described below.**
+
+**With Silverblue/Kinoite, user is able to downgrade or upgrade to any version of Fedora, because OS is separated from user's files. For example, if there is any problems with Fedora Silverblue/Kinoite Beta, user can downgrade to previous version from GRUB menu. This makes backups kind of useless, because user is able to use OS without breaking it. Of course, user files should be backed up.**
+
+**Silverblue / Kinoite could be considered for desktop computers too. This section will be updated if Kinoite is considered better than regular Fedora Workstation installation**
 
 ---
 
@@ -223,6 +241,23 @@ sudo systemctl disable NetworkManager-wait-online.service
 ```
 
 ---
+
+# Desktop Environments
+
+## Desktop environment related notes
+
+**For Intel HD Graphics, KDE should be better option than GNOME.**
+
+**Generally, if user has touch capable display, GNOME could be good option. Otherwise, KDE should be installed as a main desktop environment because it doesn't need any modifications, like GNOME does. GNOME's modifications might have bugs and updates can break them.**
+
+# KDE related changes
+```
+TODO
+```
+
+---
+
+# GNOME related changes
 
 ## Gnome Tweaks
 ```
