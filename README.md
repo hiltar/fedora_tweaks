@@ -198,7 +198,7 @@ sudo dnf config-manager --set-disabled REPO
 
 ## Useful, missing packages
 ```
-openssl
+sudo dnf install openssl openssl-devel perl
 ```
 
 ---
