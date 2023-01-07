@@ -50,7 +50,8 @@ TODO
 
 ```
 sudo dnf install tpm2-tools
-sudo systemd-cryptenroll --tpm2-device=auto --tpm2-pcrs=0+7 /dev/sdX
+sudo lsblk # search for luks volume
+sudo systemd-cryptenroll --tpm2-device=auto --tpm2-pcrs=0+7 /dev/sdX # nvme0n1p3
 
 # add tpm2-device=auto in /etc/crypttab
 
